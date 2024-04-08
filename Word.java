@@ -28,7 +28,7 @@ public class Word {
         return vertical;
     }
 
-    public Tile[] getTiles() {//
+    public Tile[] getTiles() {
         return tiles;
     }
 

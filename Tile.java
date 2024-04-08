@@ -1,7 +1,7 @@
 package test;
 import.java.util.Random;
 
-public class Tile {
+public class Tile {//
      public final char letter;
      public final int score;
 

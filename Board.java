@@ -1,7 +1,7 @@
 package test;
 
 
-public class Board {
+public class Board {//
     private static Board singl;
     private Tile[][] newBoard;
 

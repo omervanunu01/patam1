@@ -1,9 +1,9 @@
+//Omer Vanunu 211678388
 package test;
-
 
 public class Word {
 
-	private Tile[] tiles;
+    private Tile[] tiles;
     private int row;
     private int col;
     private boolean vertical;
@@ -15,6 +15,9 @@ public class Word {
         this.vertical = vertical;
     }
 
+    public Tile[] getTiles() {
+        return tiles;
+    }
 
     public int getRow() {
         return row;
@@ -28,23 +31,15 @@ public class Word {
         return vertical;
     }
 
-    public Tile[] getTiles() {
-        return tiles;
-    }
-
     @Override
     public boolean equals(Object object) {
-        if (this == object) return true;
-        if (!(object instanceof Word)) return false;
-        if (!super.equals(object)) return false;
+        if (this == object)
+            return true;
+        if (object == null || this.getClass() != object.getClass())
+            return false;
         Word word = (Word) object;
-        return getRow() == word.getRow() && getCol() == word.getCol() && isVertical() == word.isVertical() && java.util.Arrays.equals(getTiles(), word.getTiles());
+        return getRow() == word.getRow() && getCol() == word.getCol() && isVertical() == word.isVertical()
+                && java.util.Arrays.equals(getTiles(), word.getTiles());
     }
 
-    @Override
-    public int hashCode() {
-        int result = Objects.hash(super.hashCode(), getRow(), getCol(), isVertical());
-        result = 31 * result + Arrays.hashCode(getTiles());
-        return result;
-    }
 }
